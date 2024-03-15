@@ -1,0 +1,4 @@
+# To add www to any URLs that do not have them use this code:
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
